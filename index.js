@@ -1,8 +1,16 @@
-var dodger = document.getElementById('dodger');
+let dodger = document.getElementById('dodger');
 
 function moveDodgerLeft() {
-  var leftNumbers = dodger.style.left.replace('px', '');
-  var left = parseInt(leftNumbers, 10)
+  let leftNumbers = dodger.style.left.replace('px', '');
+  let left = parseInt(leftNumbers, 10)
+  if (left > 0) {
+    dodger.style.left = `${left - 1}px`
+  }
+}
+
+function moveDodgerRight() {
+  let rightNumbers = dodger.style.left.replace('px', '');
+  let left = parseInt(leftNumbers, 10)
   if (left > 0) {
     dodger.style.left = `${left - 1}px`
   }
